@@ -27,3 +27,9 @@ At this time the daemon must be started manually:
 
 - MacRuby version.
 - Support imgur's authenticated API.
+
+# License
+
+screenshot-to-imgur is released under the MIT license:
+
+- <www.opensource.org/licenses/MIT>
