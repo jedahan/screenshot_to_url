@@ -32,4 +32,4 @@ At this time the daemon must be started manually:
 
 screenshot-to-imgur is released under the MIT license:
 
-- <www.opensource.org/licenses/MIT>
+- http://www.opensource.org/licenses/MIT
