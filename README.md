@@ -27,6 +27,7 @@ At this time the daemon must be started manually:
 
 - MacRuby version.
 - Support imgur's authenticated API.
+- Add support for multiple storage sites. (S3, ..?)
 
 # License
 
