@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class ConfigurationTest < Test::Unit::TestCase
+  include ScreenshotToImgur
+
   def setup
-    @configuration = ScreenshotToImgur::Configuration.new
+    @configuration = Configuration.new
   end
 
   def test_accessor_imgur_api_key
