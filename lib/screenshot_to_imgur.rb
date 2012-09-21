@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'screenshot-to-imgur/version'
-require 'screenshot-to-imgur/configuration'
+require 'screenshot_to_imgur/version'
+require 'screenshot_to_imgur/configuration'
 
 module ScreenshotToImgur
   class << self

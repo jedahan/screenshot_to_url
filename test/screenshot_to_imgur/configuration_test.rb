@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'configuration'
 
 class ConfigurationTest < Test::Unit::TestCase
   def setup
