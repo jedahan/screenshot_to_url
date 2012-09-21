@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    screenshot_to_imgur (0.0.1)
+      growl (~> 1.0.0)
+      imgur (~> 0.2.0)
+      listen (~> 0.5.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -13,6 +21,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  growl (~> 1.0.0)
-  imgur (~> 0.2.0)
-  listen (~> 0.5.0)
+  screenshot_to_imgur!
