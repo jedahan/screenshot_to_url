@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "imgur", "~> 0.2.0"
   s.add_runtime_dependency "growl", "~> 1.0.0"
   s.add_runtime_dependency "listen", "~> 0.5.0"
+
+  s.add_development_dependency "mocha"
 end

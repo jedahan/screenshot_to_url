@@ -16,9 +16,13 @@ GEM
       crack (>= 0.1.4)
       curb (>= 0.5.4.0)
     listen (0.5.0)
+    metaclass (0.0.1)
+    mocha (0.12.4)
+      metaclass (~> 0.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  mocha
   screenshot_to_imgur!
