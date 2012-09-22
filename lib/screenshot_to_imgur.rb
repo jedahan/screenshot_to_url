@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'listen'
 require 'screenshot_to_imgur/version'
 require 'screenshot_to_imgur/configuration'
 require 'screenshot_to_imgur/watcher'

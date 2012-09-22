@@ -7,14 +7,44 @@ class WatcherTest < Test::Unit::TestCase
     @watcher = Watcher.new
   end
 
+  def test_listener
+    params = { path: '/tmp',
+               uploader: Proc.new { |path| true } }
+
+    options = { filter: /\.png$/,
+                force_polling: true,
+                polling_fallback_message: false }
+
+    callback = Proc.new { |modified, added, removed| true }
+
+    @watcher.expects(:listener_callback).once.with(params[:uploader]).returns(callback)
+
+    listener = stub()
+    Listen.expects(:to).once.with(params[:path], options).returns(listener)
+    listener.expects(:change).once.with(callback)
+
+    assert_equal listener, @watcher.listener(params)
+  end
+
+  def test_listener_callback
+    callback = stub()
+    callback.expects(:call).once.with('/tmp/test1.png')
+    callback.expects(:call).once.with('/tmp/test2.png')
+    callback.expects(:call).once.with('/tmp/test3.png')
+
+    listener_callback = @watcher.listener_callback(callback)
+    listener_callback.call(['/tmp/test1.png', '/tmp/test2.png'], ['/tmp/test3.png'], [])
+  end
+
   def test_watch
-    uploader = Proc.new do |path|
+    params = { path: '/tmp',
+               uploader: Proc.new { |path| true } }
 
-    end
+    listener = stub(:start => true)
 
-    @watcher.watch(path: '/tmp',
-                   uploader: uploader)
+    @watcher.expects(:listener).with(params).once.returns(listener)
+    listener.expects(:start).once
 
-    # @todo
+    @watcher.watch(params)
   end
 end
