@@ -18,7 +18,7 @@ module ScreenshotToImgur
     # Only modified and added files will be reported back one at
     # a time to the `callback`.
     def listener_callback(callback)
-      Proc.new do |modified, added, removed|
+      Proc.new do |modified, added, _|
         ((modified || []) + (added || [])).each { |file| callback.call(file) }
       end
     end
