@@ -9,9 +9,9 @@ module ScreenshotToImgur
     # Returns a `Listen` object with default options, a `path` and
     # the callback `uploader`.
     def listener(params)
-      listener = Listen.to(params[:path], DEFAULT_OPTIONS)
-      listener.change(listener_callback(params[:uploader]))
-      listener
+      listener_instance = Listen.to(params[:path], DEFAULT_OPTIONS)
+      listener_instance.change(listener_callback(params[:uploader]))
+      listener_instance
     end
 
     # Returns a callback that is compatible with `Listen.change`.
@@ -26,8 +26,8 @@ module ScreenshotToImgur
     # Starts watching for changes in the provided `path` and
     # will report changes back to the `uploader` callback.
     def watch(params)
-      listener = listener(params)
-      listener.start
+      listener_instance = listener(params)
+      listener_instance.start
     end
   end
 end
