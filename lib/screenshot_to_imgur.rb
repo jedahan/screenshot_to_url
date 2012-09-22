@@ -1,10 +1,12 @@
 require 'rubygems'
 require 'listen'
-require 'screenshot_to_imgur/version'
-require 'screenshot_to_imgur/configuration'
-require 'screenshot_to_imgur/watcher'
 
 module ScreenshotToImgur
+  autoload :Version,            'screenshot_to_imgur/version'
+  autoload :Configuration,      'screenshot_to_imgur/configuration'
+  autoload :CLI,                'screenshot_to_imgur/cli'
+  autoload :Watcher,            'screenshot_to_imgur/watcher'
+
   class << self
     attr_writer :configuration
 
