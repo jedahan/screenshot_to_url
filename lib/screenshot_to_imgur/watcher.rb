@@ -4,19 +4,19 @@ module ScreenshotToImgur
       filter: /\.png$/,
       force_polling: true,
       polling_fallback_message: false
-    }.freeze
+    }
 
     # Returns a `Listen` object with default options, a `path` and
     # the callback `uploader`.
     def listener(params)
       listener_instance = Listen.to(params[:path], DEFAULT_OPTIONS)
-      listener_instance.change(listener_callback(params[:uploader]))
+      listener_instance.change(&listener_callback(params[:uploader]))
       listener_instance
     end
 
-    # Returns a callback that is compatible with `Listen.change`.
+    # Returns a Proc that is compatible with `Listen.change`.
     # Only modified and added files will be reported back one at
-    # a time to the `callback`.
+    # a time to the `callback` method.
     def listener_callback(callback)
       Proc.new do |modified, added, _|
         ((modified || []) + (added || [])).each { |file| callback.call(file) }

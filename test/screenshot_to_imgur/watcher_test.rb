@@ -21,7 +21,7 @@ class WatcherTest < Test::Unit::TestCase
 
     listener = stub()
     Listen.expects(:to).once.with(params[:path], options).returns(listener)
-    listener.expects(:change).once.with(callback)
+    listener.expects(:change).once.with(&callback)
 
     assert_equal listener, @watcher.listener(params)
   end
