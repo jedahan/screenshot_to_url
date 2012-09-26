@@ -9,7 +9,7 @@ class WatcherTest < Test::Unit::TestCase
 
   def test_listener
     params = { path: '/tmp',
-               uploader: Proc.new { |path| true } }
+               callback: Proc.new { |path| true } }
 
     options = { filter: /\.png$/,
                 force_polling: true,
@@ -17,7 +17,7 @@ class WatcherTest < Test::Unit::TestCase
 
     callback = Proc.new { |modified, added, removed| true }
 
-    @watcher.expects(:listener_callback).once.with(params[:uploader]).returns(callback)
+    @watcher.expects(:listener_callback).once.with(params[:callback]).returns(callback)
 
     listener = stub()
     Listen.expects(:to).once.with(params[:path], options).returns(listener)
@@ -38,7 +38,7 @@ class WatcherTest < Test::Unit::TestCase
 
   def test_watch
     params = { path: '/tmp',
-               uploader: Proc.new { |path| true } }
+               callback: Proc.new { |path| true } }
 
     listener = stub(:start => true)
 

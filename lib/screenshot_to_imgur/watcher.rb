@@ -10,7 +10,7 @@ module ScreenshotToImgur
     # the callback `uploader`.
     def listener(params)
       listener_instance = Listen.to(params[:path], DEFAULT_OPTIONS)
-      listener_instance.change(&listener_callback(params[:uploader]))
+      listener_instance.change(&listener_callback(params[:callback]))
       listener_instance
     end
 
