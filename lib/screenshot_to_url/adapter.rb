@@ -1,4 +1,4 @@
-module ScreenshotToImgur
+module ScreenshotToUrl
   class Adapter
     def upload_screenshot(path_to_file)
       begin

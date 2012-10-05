@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'screenshot_to_url'
+
+ScreenshotToUrl::CLI.start

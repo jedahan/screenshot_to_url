@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ConfigurationTest < Test::Unit::TestCase
-  include ScreenshotToImgur
+  include ScreenshotToUrl
 
   def setup
     @configuration = Configuration.new

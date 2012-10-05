@@ -1,4 +1,4 @@
-module ScreenshotToImgur
+module ScreenshotToUrl
   class Watcher
     DEFAULT_OPTIONS = {
       filter: /\.png$/,

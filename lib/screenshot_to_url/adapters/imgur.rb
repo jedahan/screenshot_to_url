@@ -1,6 +1,6 @@
 require 'imgur'
 
-module ScreenshotToImgur
+module ScreenshotToUrl
   module Adapters
     class Imgur < Adapter
       attr_reader :api_key

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class WatcherTest < Test::Unit::TestCase
-  include ScreenshotToImgur
+  include ScreenshotToUrl
 
   def setup
     @watcher = Watcher.new

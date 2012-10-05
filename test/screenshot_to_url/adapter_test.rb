@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdapterTest < Test::Unit::TestCase
-  include ScreenshotToImgur
+  include ScreenshotToUrl
 
   def setup
     @adapter = Adapter.new

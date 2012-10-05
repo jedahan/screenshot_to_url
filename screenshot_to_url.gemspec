@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "screenshot_to_imgur/version"
+require "screenshot_to_url/version"
 
 Gem::Specification.new do |s|
-  s.name        = "screenshot_to_imgur"
-  s.version     = ScreenshotToImgur::VERSION
+  s.name        = "screenshot_to_url"
+  s.version     = ScreenshotToUrl::VERSION
   s.authors     = ["Christian Joudrey"]
   s.email       = ["cmallette@gmail.com"]
-  s.homepage    = "https://github.com/cjoudrey/screenshot-to-imgur"
+  s.homepage    = "https://github.com/cjoudrey/screenshot_to_url"
   s.summary     = %q{A simple tool that watches your screenshot folder and automatically uploads them to imgur.}
 
-  s.rubyforge_project = "screenshot_to_imgur"
+  s.rubyforge_project = "screenshot_to_url"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
