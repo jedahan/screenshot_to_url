@@ -1,4 +1,4 @@
-# Screenshot-To-Imgur
+# Screenshot_to_url
 
 I often find myself using OS 'X built-in `CMD+Shift+4` keyboard shortcut to take
 screenshots. I then manually upload the screenshot to [imgur](http://imgur.com).
@@ -21,7 +21,7 @@ this process later on.
 
 At this time the daemon must be started manually:
 
-- `bundle exec screenshot-to-imgur` from within the project folder.
+- `bundle exec screenshot_to_url` from within the project folder.
 
 # Wishlist
 
@@ -31,6 +31,6 @@ At this time the daemon must be started manually:
 
 # License
 
-screenshot-to-imgur is released under the MIT license:
+screenshot_to_url is released under the MIT license:
 
 - http://www.opensource.org/licenses/MIT
